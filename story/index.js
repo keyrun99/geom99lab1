@@ -17,7 +17,7 @@ async function initMap() {
   // stat maps_boundaries_choropleth_style_function
   featureLayer.style = (featureStyleFunctionOptions) => {
     const placeFeature = featureStyleFunctionOptions.feature;
-    const gdppercapita = states[placeFeature.placeId];
+    const towercount = states[placeFeature.placeId];
     let fillColor;
 
     // Specify colors using any of the following:
@@ -25,18 +25,14 @@ async function initMap() {
     // * Hexadecimal ('#FF0000')
     // * RGB ('rgb(0, 0, 255)')
     // * HSL ('hsl(60, 100%, 50%)')
-    if (gdppercapita < 1000) {
+    if (gdppercapita < 200) {
       fillColor = "#AFE1AF";
-    } else if (gdppercapita < 1100) {
+    } else if (gdppercapita < 300) {
       fillColor = "#DFFF00";  
-    } else if (gdppercapita < 1200) {
+    } else if (gdppercapita < 400) {
       fillColor = "#5F9EA0";
-    } else if (gdppercapita < 1300) {
+    } else if (gdppercapita < 500) {
       fillColor = "#097969";
-    } else if (gdppercapita < 1500) {
-      fillColor = "#454B1B";
-    } else if (gdppercapita < 3000) {
-      fillColor = "#228B22";
     }
     return {
       fillColor,
@@ -44,15 +40,15 @@ async function initMap() {
     };
   };
 
-  // gdppercapita data by state of nepal data obtained from https://en.wikipedia.org/wiki/Provinces_of_Nepal
+  // towercount by state of nepal data obtained from https://en.wikipedia.org/wiki/Provinces_of_Nepal
   const states = {
-    "ChIJJTMWst7W6DkRYeNF5qo7HsY": 1298, //KOshi province
-    "ChIJ3VcY0zB-7DkR4ZeNT1Gt-QQ": 882, //Madesh Province
-    "ChIJ_wJv86_i6jkRESgJiF7pmkQ": 2640, //Bagmati province
-    "ChIJC8-58DxxlTkRKb2YyXiycPo": 1348, //Gandaki province
-    "ChIJgQJOSit5ljkR6lK-Oz3cNcg": 1209, //Lumbini province
-    "ChIJlSRJE2TGvDkRAFmPDaDubQY": 1043, //Karnali province
-    "ChIJm4QKVy1ZoTkR6IGi80pLKog": 1135, //Suderpashchim province
+    "ChIJJTMWst7W6DkRYeNF5qo7HsY": 300, //Koshi province
+    "ChIJ3VcY0zB-7DkR4ZeNT1Gt-QQ": 150, //Madesh Province
+    "ChIJ_wJv86_i6jkRESgJiF7pmkQ": 450, //Bagmati province
+    "ChIJC8-58DxxlTkRKb2YyXiycPo": 350, //Gandaki province
+    "ChIJgQJOSit5ljkR6lK-Oz3cNcg": 200, //Lumbini province
+    "ChIJlSRJE2TGvDkRAFmPDaDubQY": 190, //Karnali province
+    "ChIJm4QKVy1ZoTkR6IGi80pLKog": 215, //Suderpashchim province
   };
 }
 
