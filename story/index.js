@@ -26,17 +26,17 @@ async function initMap() {
     // * RGB ('rgb(0, 0, 255)')
     // * HSL ('hsl(60, 100%, 50%)')
     if (gdppercapita < 1000) {
-      fillColor = "#FF0000";
+      fillColor = "#AFE1AF";
     } else if (gdppercapita < 1100) {
-      fillColor = "#87CEEB";  
+      fillColor = "#DFFF00";  
     } else if (gdppercapita < 1200) {
-      fillColor = "#FFA500";
+      fillColor = "#5F9EA0";
     } else if (gdppercapita < 1300) {
-      fillColor = "#0000F";
+      fillColor = "#097969";
     } else if (gdppercapita < 1500) {
-      fillColor = "#90EE90";
+      fillColor = "#454B1B";
     } else if (gdppercapita < 3000) {
-      fillColor = "#023020";
+      fillColor = "#228B22";
     }
     return {
       fillColor,
