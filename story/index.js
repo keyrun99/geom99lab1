@@ -25,13 +25,13 @@ async function initMap() {
     // * Hexadecimal ('#FF0000')
     // * RGB ('rgb(0, 0, 255)')
     // * HSL ('hsl(60, 100%, 50%)')
-    if (gdppercapita < 200) {
+    if (towercount < 200) {
       fillColor = "#AFE1AF";
-    } else if (gdppercapita < 300) {
+    } else if (towercount < 300) {
       fillColor = "#DFFF00";  
-    } else if (gdppercapita < 400) {
+    } else if (towercount < 400) {
       fillColor = "#5F9EA0";
-    } else if (gdppercapita < 500) {
+    } else if (towercount < 500) {
       fillColor = "#097969";
     }
     return {
