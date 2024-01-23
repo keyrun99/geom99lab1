@@ -48,7 +48,7 @@ async function initMap() {
     "ChIJC8-58DxxlTkRKb2YyXiycPo": 350, //Gandaki province
     "ChIJgQJOSit5ljkR6lK-Oz3cNcg": 200, //Lumbini province
     "ChIJlSRJE2TGvDkRAFmPDaDubQY": 190, //Karnali province
-    "ChIJm4QKVy1ZoTkR6IGi80pLKog": 215, //Suderpashchim province
+    "ChIJm4QKVy1ZoTkR6IGi80pLKog": 400, //Suderpashchim province
   };
 }
 
