@@ -36,7 +36,7 @@ async function initMap() {
     }
     return {
       fillColor,
-      fillOpacity: 0.7,
+      fillOpacity: 0.5,
     };
   };
 
