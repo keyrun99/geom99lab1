@@ -8,7 +8,7 @@ async function initMap() {
     zoom: 7,
 
     // "Administrative Area Level 1" means the map tragets the states, province or region on feature layer.
-    mapId: "7ba16be0c9375fa7",
+    //mapId: "7ba16be0c9375fa7",
   });
   const featureLayer = map.getFeatureLayer(
     google.maps.FeatureType.ADMINISTRATIVE_AREA_LEVEL_1,
