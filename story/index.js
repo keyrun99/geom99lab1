@@ -26,13 +26,13 @@ async function initMap() {
     // * RGB ('rgb(0, 0, 255)')
     // * HSL ('hsl(60, 100%, 50%)')
     if (towercount < 200) {
-      fillColor = "#AFE1AF";
+      fillColor = "#58CCED";
     } else if (towercount < 300) {
-      fillColor = "#DFFF00";  
+      fillColor = "#3895D3";  
     } else if (towercount < 400) {
-      fillColor = "#5F9EA0";
+      fillColor = "#1261A0";
     } else if (towercount < 500) {
-      fillColor = "#097969";
+      fillColor = "#072F5F";
     }
     return {
       fillColor,
