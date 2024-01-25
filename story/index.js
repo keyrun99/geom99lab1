@@ -1,6 +1,6 @@
 // https://developers.google.com/maps/documentation/javascript/dds-boundaries/choropleth-map#try-sample
 
-function initMap() {
+async function initMap() {
   // Request needed libraries.
   const { Map } = await google.maps.importLibrary("maps");
   const map = new Map(document.getElementById("map"), {
@@ -52,4 +52,4 @@ function initMap() {
   };
 }
 
-windows.initMap = initMap;
+initMap();
