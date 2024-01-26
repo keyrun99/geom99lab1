@@ -12,7 +12,7 @@
       * the height of the map is set to 100 percent for better illustration and learning
       */
       #map {
-        height: 75%;
+        height: 90%;
         border:5px solid rgb(78, 76, 76);
       }
         
@@ -29,12 +29,17 @@
         text-align: center;
         align-content: center;
       }
-      table.data_table{
-        margin-left: auto;
-        margin-right: auto;
-        width: 40%;
+      .data_table{
+
         margin-top: -20px;
+        position: absolute;
+        display: block;
+        z-index: 1;
+        background-color: rgb(245, 238, 238);
+        top: 70%;
+        left: 20px;
       }
+
       table, th, td {
         border:1px solid black;
         text-align: center;
@@ -46,7 +51,7 @@
   <body>
     <div class = row_container>
       <!-- <div class="description"> -->
-      <h1>Data Table</h1>
+      <h1>Telecommunication Tower Count Supervised during CCSI Table</h1>
       <table class="data_table">
         <tr>
           <th>Province</th>
@@ -57,27 +62,27 @@
           <td>300</td>
         </tr>
         <tr>
-          <td>Province 2 Madesh Province</td>
+          <td>Province 2 (Madesh Province)</td>
           <td>150</td>
         </tr>
         <tr>
-          <td>Province 3 Bagmati Province</td>
+          <td>Province 3 (Bagmati Province)</td>
           <td>450</td>
         </tr>
         <tr>
-          <td>Province 4 Gandaki Province</td>
+          <td>Province 4 (Gandaki Province)</td>
           <td>350</td>
         </tr>
         <tr>
-          <td>Province 5 Lumbini Province</td>
+          <td>Province 5 (Lumbini Province)</td>
           <td>200</td>
         </tr>
         <tr>
-          <td>Province 6 Karnali Province</td>
+          <td>Province 6 (Karnali Province)</td>
           <td>190</td>
         </tr>
         <tr>
-          <td>Province 7 Suderpaschim Province</td>
+          <td>Province 7 (Suderpaschim Province)</td>
           <td>400</td>
         </tr>          
       </table>
