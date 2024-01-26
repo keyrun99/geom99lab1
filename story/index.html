@@ -12,28 +12,86 @@
       * the height of the map is set to 100 percent for better illustration and learning
       */
       #map {
-          height: 100%;
-        }
+        height: 75%;
+        border:5px solid rgb(78, 76, 76);
+      }
         
-        /* 
-        * Optional: Map fills the whole window. 
-        */
-        html,
-        body {
-          height: 100%;
-          margin: 0;
-          padding: 0;
-        }
+      /* 
+      * Optional: Map fills the whole window. 
+      */
+      html,body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .row_container{
+        background-color: rgb(200, 189, 189);
+        text-align: center;
+        align-content: center;
+      }
+      table.data_table{
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        margin-top: -20px;
+      }
+      table, th, td {
+        border:1px solid black;
+        text-align: center;
+      }
+
     </style>
 
   </head>
   <body>
-    <div id="map"></div>
+    <div class = row_container>
+      <!-- <div class="description"> -->
+      <h1>Data Table</h1>
+      <table class="data_table">
+        <tr>
+          <th>Province</th>
+          <th>Tower Count</th>
+        </tr>
+        <tr>
+          <td>Province 1 (Koshi Province)</td>
+          <td>300</td>
+        </tr>
+        <tr>
+          <td>Province 2 Madesh Province</td>
+          <td>150</td>
+        </tr>
+        <tr>
+          <td>Province 3 Bagmati Province</td>
+          <td>450</td>
+        </tr>
+        <tr>
+          <td>Province 4 Gandaki Province</td>
+          <td>350</td>
+        </tr>
+        <tr>
+          <td>Province 5 Lumbini Province</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>Province 6 Karnali Province</td>
+          <td>190</td>
+        </tr>
+        <tr>
+          <td>Province 7 Suderpaschim Province</td>
+          <td>400</td>
+        </tr>          
+      </table>
 
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w &callback=initMap&v=weekly"
-      defer
-    ></script>
+      </div>
+
+    
+      <div id="map">
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE &callback=initMap&v=weekly"
+          defer
+        ></script>
+      </div>
+    </div>
     
   </body>
 </html>
