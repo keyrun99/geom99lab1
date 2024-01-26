@@ -1,0 +1,85 @@
+/**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+// This example displays a marker at the center of Australia.
+// When the user clicks the marker, an info window opens.
+function initMap() {
+  const center = { lat: 27.72, lng: 85.33 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 7,
+    center: center,
+    mapId: "7ba16be0c9375fa7",
+  });
+  const featureLayer = map.getFeatureLayer(
+    google.maps.FeatureType.ADMINISTRATIVE_AREA_LEVEL_1,
+  );
+  featureLayer.style = (featureStyleFunctionOptions) => {
+    const placeFeature = featureStyleFunctionOptions.feature;
+    const towercount = states[placeFeature.placeId];
+    let fillColor;
+
+    // Specify colors using any of the following:
+    // * Named ('green')
+    // * Hexadecimal ('#FF0000')
+    // * RGB ('rgb(0, 0, 255)')
+    // * HSL ('hsl(60, 100%, 50%)')
+    if (towercount < 200) {
+      fillColor = "#58CCED";
+    } else if (towercount < 300) {
+      fillColor = "#3895D3";
+    } else if (towercount < 400) {
+      fillColor = "#1261A0";
+    } else if (towercount < 500) {
+      fillColor = "#072F5F";
+    }
+    return {
+      fillColor,
+      fillOpacity: 0.5,
+    };
+  };
+  
+  const states = {
+    "ChIJJTMWst7W6DkRYeNF5qo7HsY": 300,
+    "ChIJ3VcY0zB-7DkR4ZeNT1Gt-QQ": 150,
+    "ChIJ_wJv86_i6jkRESgJiF7pmkQ": 450,
+    "ChIJC8-58DxxlTkRKb2YyXiycPo": 350,
+    "ChIJgQJOSit5ljkR6lK-Oz3cNcg": 200,
+    "ChIJlSRJE2TGvDkRAFmPDaDubQY": 190,
+    "ChIJm4QKVy1ZoTkR6IGi80pLKog": 400,
+    
+    }
+    
+  const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">China Communication Service</h1>' +
+    '<div id="bodyContent">' +
+    "<p><b>China Communication Service</b>, head office located at Kalika Tower " +
+    "Kathmandu</p>" +
+    '<p>Attribution: China Com Service <a href="https://en.wikipedia.org/wiki/China_Communications_Services">' +
+    "https://en.wikipedia.org/wiki/China_Communications_Servicestitle=China Com Service</a> " +
+
+    "</div>" +
+    "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "center",
+  });
+  const marker = new google.maps.Marker({
+    position: center,
+    map,
+    title: "center (Ayers Rock)",
+  });
+
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  });
+}
+
+window.initMap = initMap;
